@@ -21,11 +21,9 @@
             padding: 20px 15px;
             transition: .7s;
             opacity: 0;
-            visibility: hidden;
 
             &:hover {
                 opacity: 1;
-                visibility: visible;
             }
 
             &::after {
