@@ -1,0 +1,58 @@
+.nav {
+
+    &--burger {
+        transform: translateX(0);
+    }
+
+    &__list {
+        
+        @include flex-around;
+        justify-content: flex-start;
+
+
+        @media(min-width:767px) {
+            flex-direction: initial;
+            justify-content: flex-end;
+            width: 100%;
+        }
+    }
+    &__link {
+        margin: 20px 0 20px 20px;
+        position: relative;
+
+
+        &-item {
+            color: $black-color;
+            @include adaptive-font(20, 18);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 10px 0;
+
+            @media(min-width:767px) {
+                letter-spacing: 1px;
+                text-transform: initial;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                border-bottom: 3px solid $orange-color;
+                position: absolute;
+                bottom: -7px;
+                left: 50%;
+                transition: .3s;
+            }
+            &:hover::after {
+                content: "";
+                display: block;
+                width: 100%;
+                border-bottom: 3px solid $orange-color;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+            }
+        }
+    }
+}

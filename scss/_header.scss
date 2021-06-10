@@ -1,0 +1,48 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #fff;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        min-height: 65px;
+        position: relative;
+    }
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include flex-around;
+        justify-content: flex-start;
+        margin-top: 65px;
+        padding: 15px;
+        background-color: #ffffff;
+        overflow: auto;
+        transform: translateX(100%);
+        width: 100%;
+        min-height: 100%;
+        z-index: 50;
+        transition: transform .3s ease-in-out;
+
+        @media (min-width: 767px) {
+            position: inherit;
+            transform: inherit;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            margin-top: initial;
+            padding: initial;
+            width: 100%;
+        }
+    }
+}

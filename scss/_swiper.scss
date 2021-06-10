@@ -1,0 +1,99 @@
+.swiper {
+    min-height: 100vh;
+    width: 100%;
+    @include flex-column;
+
+    &-container {
+        width: 100%;
+    }
+    &-wrapper {
+        position: relative;
+    }
+    &-slide {
+        position: relative;
+        @include flex-column;
+    }
+    &-img {
+        width: 100%;
+        min-height: 100vh;
+        max-height: 700px;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__block {
+        position: absolute;
+
+        @include flex-around;
+        min-height: 100%;
+
+        @media(min-width:767px) {
+            justify-content: center;
+        }
+        &-content {
+            @include flex-around;
+            min-height: 275px;
+            height: 100%;
+        }
+        &-title {
+            @include adaptive-font(56, 30);
+            font-weight: bold;
+
+            &--white {
+                color: #ffffff;
+            }
+        }
+        &-subtitle {
+            @include adaptive-font(36, 20);
+            font-weight: bold;
+
+            &--white {
+                color: #ffffff;
+            }
+        }
+        &-text {
+            @include adaptive-font(16, 13);
+
+            &--white {
+                color: #ffffff;
+            }
+        }
+    }
+    &-pagination {
+
+        &-bullet {
+            width: 16px;
+            height: 15px;
+            display: inline-block;
+            border-radius: 50%;
+            background: $orange-color;
+            opacity: inherit;
+
+            &-active {
+                opacity: inherit;
+                background-color: #fff;
+                border: 3px solid $orange-color;
+            }
+        }
+    }
+    &-button {
+
+        &-prev, &-next {
+            border: 3px solid $orange-color;
+            padding: 20px;
+            background-color: #fff;
+            color: $orange-color;  
+        }
+        &-prev {
+
+            &:active {
+                left: 9px;
+            }
+        }
+        &-next {
+            
+            &:active {
+                right: 11px;
+            }
+        }
+    }
+}

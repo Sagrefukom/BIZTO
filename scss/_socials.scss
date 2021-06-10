@@ -1,0 +1,50 @@
+.socials {
+
+    &__item {
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        background: url(../img/sprite.png) 0px 0px no-repeat;
+        margin: 0 5px;
+        border: 1px solid rgba(255,255,255,0.5);
+        position: relative;
+
+        &--facebook, &--twitter, &--behance {
+            
+            &::after {
+                content: "";
+                opacity: 0;
+                transition: opacity 0.7s  ease-in;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            &:hover::after {
+                opacity: 1;
+                transition: opacity 0.5s;
+            }
+        }
+        &--facebook {
+
+            &::after {
+                 background: url(../img/sprite.png) 0 -40px no-repeat;
+            }
+        }
+        &--twitter {
+            background: url(../img/sprite.png) -40px 0 no-repeat;
+
+            &::after {
+                background: url(../img/sprite.png) -40px -40px no-repeat;
+            }
+        }
+        &--behance {
+            background: url(../img/sprite.png) -80px 0 no-repeat;
+
+            &::after {
+                background: url(../img/sprite.png) -80px -40px no-repeat;
+            }
+        }
+    }
+}

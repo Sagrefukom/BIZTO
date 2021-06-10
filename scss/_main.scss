@@ -1,0 +1,20 @@
+.main {
+
+    &-fullscreen {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+    }
+    &-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 50px;
+
+        &_button {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    }
+}

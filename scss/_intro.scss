@@ -1,0 +1,45 @@
+.intro {
+    @include flex-around;
+    min-height: 275px;
+    padding: 0 15px 50px 15px;
+    position: relative;
+
+    &__title {      
+        @include adaptive-font(35, 30);
+        font-weight: 500;
+    }
+    &__subtitle {
+        max-width: 730px;
+        @include adaptive-font(18, 16);
+        color: $grey-color;
+        line-height: 30px;
+    }
+    &__span {
+        width: 1px;
+        content: "";
+        height: 15px;
+        background: $black-color;
+        position: relative;
+
+        &::after, &::before {
+            content: "";
+            margin: 0 auto;
+            position: absolute;
+            height: 1px;
+            background: $black-color;
+        }
+        &::after {
+            bottom: 6px;
+            height: 1px;
+            left: -15px;
+            width: 30px;
+        }
+        &::before {
+            bottom: 0px;
+            height: 1px;
+            left: -25px;
+            width: 50px;
+        }
+
+    }
+}

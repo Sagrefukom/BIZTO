@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    background-color: $orange-color;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    color: $black-color;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+
+    &:hover {
+        background-color: $black-color;
+        color: #ffffff;
+        transition: all .7s ease;
+    }
+    &:active {
+        top: 3px;
+    }
+
+    &--black {
+        background-color: $black-color;
+        color: #ffffff;
+
+        &:hover {
+            background-color: $orange-color;
+            color: #ffffff;
+            transition: all .7s ease;
+        }
+    }
+}
